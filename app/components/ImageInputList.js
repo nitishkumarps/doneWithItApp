@@ -1,10 +1,8 @@
-//import liraries
-import React, { Component, useRef } from "react";
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import React, { useRef } from "react";
+import { View, StyleSheet, ScrollView } from "react-native";
 import ImageInput from "./ImageInput";
 
-// create a component
-const ImageInputList = ({ imageUris = [], onRemoveImage, onAddImage }) => {
+function ImageInputList({ imageUris = [], onRemoveImage, onAddImage }) {
   const scrollView = useRef();
 
   return (
@@ -28,9 +26,8 @@ const ImageInputList = ({ imageUris = [], onRemoveImage, onAddImage }) => {
       </ScrollView>
     </View>
   );
-};
+}
 
-// define your styles
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
@@ -40,5 +37,4 @@ const styles = StyleSheet.create({
   },
 });
 
-//make this component available to the app
 export default ImageInputList;
